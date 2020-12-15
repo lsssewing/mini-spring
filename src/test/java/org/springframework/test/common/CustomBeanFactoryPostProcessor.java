@@ -16,8 +16,8 @@ public class CustomBeanFactoryPostProcessor implements BeanFactoryPostProcessor 
 	@Override
 	public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
 		System.out.println("CustomBeanFactoryPostProcessor#postProcessBeanFactory");
-		BeanDefinition personBeanDefiniton = beanFactory.getBeanDefinition("person");
-		PropertyValues propertyValues = personBeanDefiniton.getPropertyValues();
+		BeanDefinition personBeanDefinition = beanFactory.getBeanDefinition("person");
+		PropertyValues propertyValues = personBeanDefinition.getPropertyValues();
 		//将person的name属性改为ivy
 		propertyValues.addPropertyValue(new PropertyValue("name", "ivy"));
 	}

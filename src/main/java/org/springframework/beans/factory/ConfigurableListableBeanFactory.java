@@ -18,7 +18,7 @@ public interface ConfigurableListableBeanFactory extends ListableBeanFactory, Au
 	 *
 	 * @param beanName
 	 * @return
-	 * @throws BeansException 如果找不到BeanDefintion
+	 * @throws BeansException 如果找不到BeanDefinition
 	 */
 	BeanDefinition getBeanDefinition(String beanName) throws BeansException;
 
